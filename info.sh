@@ -42,6 +42,7 @@ else
 printf "\e[1;93m [!] Invalid option!\e[0m\n"
 sleep 1
 clear
+banner
 menu
 fi
 }
@@ -452,7 +453,6 @@ rm -rf open.ports
 rm -rf ports
 printf "\e[0m\n"
 fi
-exit 1
 re
 }
 
@@ -472,9 +472,9 @@ printf "\e[1;92m[*] Open!\e[0m\n"
 else
 printf "\e[1;93m[*] Close!\e[0m\n"
 fi
+re
 elif [[ $choice_port == "2" ]]; then
 portrange
-re
 fi
 }
 rm -rf iptracker.log
